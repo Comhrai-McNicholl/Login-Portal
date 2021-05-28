@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Servers</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7a7602bd61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/ico" href="/logo.png" />
+    <meta name="og:title" content="Account Login Panel"/>
+    <meta name="og:type" content="movie"/>
+    <meta name="og:url" content="https://comhrai.co/"/>
+    <meta name="og:image" content="http://ia.media-imdb.com/rock.jpg"/>
+    <meta name="og:description" content="Login to your Shield Account."/>
+
+</head>
+<body>
+
+    <div class='wrapper'>
+        <div class='sidebar'>
+            <img src="../logo.png" alt="logo" class="logo">
+            <ul>
+                <li><a href='index.html'><i class="fas fa-home"></i>Home</a></li>
+                <li><a href='' id="active"><i class="fas fa-server"></i>Servers</a></li>
+                <li><a href=''><i class="fas fa-wrench"></i>Updates</a></li>
+                <li><a href=''><i class="fas fa-stream"></i>Timeline</a></li>
+                <li><a href=''><i class="fas fa-calendar"></i>calendar</a></li>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <li><a href='logout.php'><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="servers">
+        <div class="s1">
+            <h1 class="title">Dedicated Servers</h1>
+
+            <div class="brand-item">
+                <div class="blob green"></div>
+                <h4>DHZ-494A</h4>
+            </div>
+
+        </div>
+        <div class="s2">
+            <h1 class="title">Craftality Servers</h1>
+            <div class="brand-item">
+                <div class="blob green"></div>
+                <h4>Proxy</h4>
+            </div>
+            <div class="brand-item">
+                <div class="blob green"></div>
+                <h4>SkyBlock</h4>
+            </div>
+            <div class="brand-item">
+                <div class="blob green"></div>
+                <h4>Hub-1</h4>
+            </div>
+            <div class="brand-item">
+                <div class="blob red"></div>
+                <h4>Dev-SkyBlock</h4>
+            </div>
+        </div>
+        <div class="s3">
+            <h1 class="title">Web Servers</h1>
+            <div class="brand-item">
+                <div class="blob green"></div>
+                <h4>comhrai.co</h4>
+            </div>
+            <div class="brand-item">
+                <div class="blob red"></div>
+                <h4>craftality.net</h4>
+            </div>
+            <div class="brand-item">
+                <div class="blob green"></div>
+                <h4>rbfcosmetics.co.uk</h4>
+            </div>
+        </div>
+        <div class="s4">
+            <h1 class="title">Remote Servers</h1>
+        </div>
+    </div>
+
+    <!-- STYLESHEET (PHP ADDON)-->
+
+    <style>
+        body {
+            font-family: 'Mulish', sans-serif;
+            margin: 0;
+            background: #171717;
+        }
+        .servers {
+            margin-top: 25px;
+            margin-left: 350px;
+            display: flex;
+        }
+
+        /* .brand-item {
+            background: #171717;
+            width: 80%;
+            border-radius: 5px;
+            margin: 30px;
+        } */
+
+        .brand-item {
+            border-radius: 8px;
+            margin: 14px;
+            margin-left: 25px;
+            display: flex;
+            margin-right: 25px;
+            background: #171717;
+            padding: 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        h4 {
+            margin-left: 15px;
+        }
+        .brand-item ul {
+            margin: 0;
+            padding: 0;
+            padding-top: 15px;
+            border-radius: 8px;
+        }
+
+        .brand-item ul li {
+            border-radius: 8px;
+            background-color: #252525;
+            padding-right: 20px;
+            padding-left: 15px;
+            background: 252525;
+            display: grid;
+            align-items: center;
+            justify-items: left;
+            grid-template-columns: 50px 1fr 1fr;
+            margin: 10px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        .brand-item ul li div {
+            padding: 0;
+        }
+
+        .brand-item ul li #status-circle {
+            justify-self: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            transform: scale(1);
+            animation: pulse 2s infinite;
+        }
+
+        .brand-item ul li #server-meta {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 5px;
+            padding-right: 10px;
+            text-align: left;
+        }
+
+        .brand-item ul li #server-meta h5 { 
+            margin: 0;
+            color: #ABABAB;
+            font-weight: 400;
+        }
+
+        .brand-item ul li #server-meta h4 { 
+            margin: 0;
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+
+        .s1 {
+            background: #1F1F1F;
+            width: 20%;
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 900px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .s2 {
+            background: #1F1F1F;
+            width: 20%;
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 900px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .s3 {
+            background: #1F1F1F;
+            width: 20%;
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 900px;
+            border-radius: 12px;
+            color: white;
+        }
+        .s4 {
+            background: #1F1F1F;
+            width: 20%;
+            margin-left: 25px;
+            margin-right: 25px;
+            height: 900px;
+            border-radius: 12px;
+            color: white;
+        }
+        .title {
+            margin-bottom: 50px;
+            font-size: 25px;
+            text-align: center;
+        }
+        .title:after {
+            margin-left: 75px;
+              margin-top: 10px;
+              content: "";
+              border-bottom: 3px solid #ffffff;
+              width: 50%;
+             display: block;
+        } 
+
+        .logo {
+            margin-top: 30px;
+            text-align: center;
+            margin-left: 90px;
+            margin-bottom: 100px;
+            height: 100px;
+        }
+
+        #active {
+            color: #777777;
+        }
+        .wrapper {
+            display: flex;
+            position: relative;   
+            list-style: none;
+        }
+        .wrapper .sidebar {
+            position: fixed;
+            width: 300px;
+            list-style: none;
+            text-decoration: none;
+            height: 100%;
+            background: #1F1F1F;
+            padding: 30px 0;
+
+        }
+        .wrapper .sidebar h2 {
+            color: #fff;
+            text-transform: uppercase;
+            list-style: none;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 30px;
+        }
+        .wrapper .sidebar ul li {
+            padding: 15px;
+            list-style: none;
+            text-decoration: none;
+            display: inline;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            border-top: 1px solid rgba(225,225,225,0.05);
+        }
+
+        .wrapper .sidebar ul li a {
+            color: #ffffff;
+            display: block;
+            text-decoration: none;
+        }
+
+        .wrapper .sidebar ul li a:hover {
+            color: #363636;
+        }
+
+        .wrapper .sidebar ul li a .fas {
+            width: 25px;
+        }
+        .blob {
+            background: black;
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+            margin: 15px;
+            height: 35px;
+            width: 35px;
+            transform: scale(1);
+            animation: pulse-black 2s infinite;
+        }
+        @keyframes pulse-black {
+        0% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+        }
+        
+        70% {
+            transform: scale(1);
+            box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+        }
+        
+        100% {
+            transform: scale(0.95);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        }
+    }
+    .blob.green {
+        background: rgb(51, 217, 73);
+        box-shadow: 0 0 0 0 rgb(51, 217, 92);
+        animation: pulse-green 2s infinite;
+    }
+     @keyframes pulse-green {
+        0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(51, 217, 65, 0.7);
+            }
+            
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+            }
+            
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+            }
+        }
+        .blob.red {
+            background: rgba(255, 82, 82, 1);
+            box-shadow: 0 0 0 0 rgba(255, 82, 82, 1);
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+            }
+            
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+            }
+            
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+            }
+        }
+
+
+
+    </style>
+</body>
+</html>
